@@ -8,6 +8,7 @@ const App = () => {
 
     const [dieValues, setDieValues] = React.useState(rollDice());
     const [tenzies, setTenzies] = React.useState(false);
+    const [visitors, setVisitors] = React.useState(0);
 
     React.useEffect(() => {
         if (dieValues.every(die => die.isHeld)) {
@@ -18,6 +19,14 @@ const App = () => {
             }
         }
     }, [dieValues]);
+
+    React.useEffect(() => {
+        fetch("https://api.countapi.xyz/hit/sv_tenzies")
+        .then(res => res.json())
+        .then(res => {
+            setVisitors(res.value);
+        })
+    }, []);
 
     function generateDie() {
         return {
@@ -82,6 +91,7 @@ const App = () => {
             >
                 {tenzies ? "New Game" : "Roll"}
             </div>
+            <p>Total Visitors: {visitors}</p>
             {tenzies && <Confetti />}
         </div>
     )
