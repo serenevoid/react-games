@@ -21,7 +21,7 @@ const App = () => {
     }, [dieValues]);
 
     React.useEffect(() => {
-        fetch("https://api.countapi.xyz/hit/sv_tenzies")
+        fetch("https://api.countapi.xyz/hit/sv_tenzies/deployed")
         .then(res => res.json())
         .then(res => {
             setVisitors(res.value);
@@ -80,7 +80,8 @@ const App = () => {
         <div className="container">
             <h1>Tenzies</h1>
             <p>
-                Roll until all slots have the same number. Click a slot to freeze it.
+                Roll until all slots have the same number. <br/>
+                Click a slot to freeze it.
             </p>
             <div className="die_container">
                 {dice}
