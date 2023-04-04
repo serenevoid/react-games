@@ -34,6 +34,7 @@ const Sliding = () => {
         }
         temp.push(0);
         setCellValues(temp);
+        setComplete(false);
     }
 
     function swap(key: number) {
