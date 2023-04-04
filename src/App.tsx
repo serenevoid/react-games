@@ -24,8 +24,8 @@ const App = () => {
             <Router basename="/react-games">
                 <Routes>
                     <Route index element={<Home />} />
-                    <Route path="/react-games/tenzies" element={<Tenzies />} />
-                    <Route path="/react-games/sliding-numbers" element={<Sliding />} />
+                    <Route path="/tenzies" element={<Tenzies />} />
+                    <Route path="/sliding-numbers" element={<Sliding />} />
                 </Routes>
             </Router>
             <br />
