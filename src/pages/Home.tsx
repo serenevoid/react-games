@@ -4,12 +4,12 @@ const Home = () => {
         {
             id: 1,
             name: "Tenzies",
-            url: "/tenzies"
+            url: "/react-games/tenzies"
         },
         {
             id: 2,
             name: "Sliding Numbers",
-            url: "/sliding-numbers"
+            url: "/react-games/sliding-numbers"
         }
     ];
 
