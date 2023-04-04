@@ -9,6 +9,10 @@ const Sliding = () => {
     const [complete, setComplete] = React.useState(false);
 
     React.useEffect(() => {
+        setGame();
+    }, []);
+
+    function setGame() {
         let temp = [];
         for (let i = 1; i < 16; i++) {
             temp.push(i);
@@ -30,7 +34,7 @@ const Sliding = () => {
         }
         temp.push(0);
         setCellValues(temp);
-    }, []);
+    }
 
     function swap(key: number) {
         let cell_index = 0;
@@ -72,8 +76,17 @@ const Sliding = () => {
             <h1>
                 Sliding Puzzle
             </h1>
-            <div className="slide_box">
+            <p>
+                Move the blocks one at a time.
+            </p>
+            <div className="slide_box" id="box">
                 {cells}
+            </div>
+            <div
+                className="button new_game"
+                onClick={setGame}
+            >
+                New Game
             </div>
             {complete && <Confetti />}
         </div>

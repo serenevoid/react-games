@@ -32,6 +32,10 @@ p {
     justify-content: center;
 }
 
+.stats {
+    padding: 1em;
+}
+
 .games_list {
     margin: 1em;
     padding: 1em;
@@ -105,7 +109,6 @@ p {
     background-image: linear-gradient(to bottom right, coral, crimson);
     padding: 0.5em;
     margin: 1em;
-    transition: 1s;
     user-select: none;
 }
 
@@ -119,6 +122,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 1s;
 }
 
 .empty_cell {
