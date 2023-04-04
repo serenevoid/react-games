@@ -21,7 +21,7 @@ const App = () => {
 
     return (
         <div>
-            <Router basename="/react-games">
+            <Router>
                 <Routes>
                     <Route index element={<Home />} />
                     <Route path="/tenzies" element={<Tenzies />} />
