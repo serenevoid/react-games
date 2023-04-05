@@ -18,6 +18,7 @@ const Sliding = () => {
             temp.push(i);
         }
         temp.sort(() => Math.random() - 0.5);
+        temp.push(0);
         // Check if the random matrix formed is solvable or else make it solvable
         let solvable = 0;
         for (let i = 0; i < temp.length; i++) {
@@ -32,7 +33,6 @@ const Sliding = () => {
             temp[1] = temp[2];
             temp[2] = tmp;
         }
-        temp.push(0);
         setCellValues(temp);
         setComplete(false);
     }
