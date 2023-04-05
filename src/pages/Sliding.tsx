@@ -20,11 +20,11 @@ const Sliding = () => {
         temp.sort(() => Math.random() - 0.5);
         // Check if the random matrix formed is solvable or else make it solvable
         let solvable = 0;
-        for (let i = 1; i < temp.length; i++) {
-            if ((temp[i] - temp[i - 1]) > 0) {
-                solvable += 1;
-            } else {
-                solvable -= 1;
+        for (let i = 0; i < temp.length; i++) {
+            for (let j = i + 1; j < temp.length; j++) {
+                if (temp[i] > temp[j]) {
+                    solvable += 1;
+                }
             }
         }
         if (solvable % 2 == 0) {
