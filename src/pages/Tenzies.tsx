@@ -2,7 +2,6 @@ import React from "react";
 import "../style.css";
 import Die from "../components/Die";
 import { nanoid } from "nanoid";
-import Confetti from "react-confetti";
 
 const Tenzies = () => {
 
@@ -67,7 +66,7 @@ const Tenzies = () => {
     })
 
     return (
-        <div className="container">
+        <div className={tenzies ? "container correct": "container"}>
             <h1>Tenzies</h1>
             <p>
                 Roll until all slots have the same number. <br />
@@ -82,7 +81,6 @@ const Tenzies = () => {
             >
                 {tenzies ? "New Game" : "Roll"}
             </div>
-            {tenzies && <Confetti />}
         </div>
     )
 

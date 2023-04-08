@@ -1,6 +1,5 @@
 import React from "react";
 import Sliding_Cell from "../components/Sliding_Cell";
-import Confetti from "react-confetti";
 
 const Sliding = () => {
 
@@ -73,7 +72,7 @@ const Sliding = () => {
     }, [cellValues]);
 
     return (
-        <div className="container">
+        <div className={complete ? "container correct": "container"}>
             <h1>
                 Sliding Puzzle
             </h1>
@@ -89,7 +88,6 @@ const Sliding = () => {
             >
                 New Game
             </div>
-            {complete && <Confetti />}
         </div>
     )
 }

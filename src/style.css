@@ -30,6 +30,11 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 500ms;
+}
+
+.correct {
+    background-image: linear-gradient(to bottom right, lightblue, lightgreen);
 }
 
 .stats {
